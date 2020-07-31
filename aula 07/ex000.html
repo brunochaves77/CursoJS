@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(47, 47, 124);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: rgb(151, 151, 35)
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        var idade = window.prompt('Qual é sua idade?')
+        var maiorid = 18
+        document.write(`Olá, <strong>${nome}</strong>! Você tem ${idade} anos.<br/>`)
+        if (idade >= maiorid) { document.write(`Voce é maior de idade.<br/>`)
+              }
+              else {
+                  document.write(`Voce é de menor.<br/>`)
+              }
+        document.write(`Seu nome em maiusculas é ${nome.toUpperCase()}.<br/>`) 
+        document.write(`Seu nome em minusculas é ${nome.toLocaleLowerCase()}.<br/>`)
+    </script>
+</body>
+</html>
