@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulado</title>
+</head>
+<body>
+    <h1>Consulado</h1>
+    Insira seu pais de nascimento: <input type="text" name="pais" id="pais"> 
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"> 
+
+    </div>  
+    <script>
+        function verificar() {
+        var txtv = window.document.getElementById('pais')
+        var res = window.document.querySelector('div#res')
+        var vel = (txtv.value)
+        res.innerHTML = `<p>Você está em <strong>${vel}</strong><p>`
+            if (vel != 'Brasil') {
+                res.innerHTML += `<p>Voce é <strong>ESTRANGEIRO</strong> e sera deportado!</p>` 
+            }else {
+                res.innerHTML += `<p>Voce é <strong>BRASILEIRO</strong>, seja bem vindo!</p>` 
+            }
+        }
+    </script>
+</body>
+</html>
