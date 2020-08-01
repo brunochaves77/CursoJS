@@ -18,20 +18,60 @@
     </style>
 </head>
 <body>
-    <h1>Somando Valores</h1>
-    <input type="number" name="txtn1" id="txtn1"> +
-    <input type="number" name="txtn2" id="txtn2">    
+    <h1>Calculadora</h1>
+    <input type="number" name="s1" id="s1"> +
+    <input type="number" name="s2" id="s2"> =>   
     <input type="button" value="Somar" onclick="somar()">
+    <div></div>
+    <input type="number" name="m1" id="m1"> - 
+    <input type="number" name="m2" id="m2">
+    <input type="button" value="Subtrair" onclick="subtrair()">
+    <div></div>
+    <input type="number" name="v1" id="v1"> * 
+    <input type="number" name="v2" id="v2">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <div></div>
+    <input type="number" name="d1" id="d1"> / 
+    <input type="number" name="d2" id="d2">
+    <input type="button" value="Dividir" onclick="dividir()">
+    <div></div>
     <div id="res">Resultado</div>
     <script>
         function somar() {
-            var tn1 = window.document.getElementById('txtn1')
-            var tn2 = window.document.querySelector('input#txtn2')
+            var ts1 = window.document.getElementById('s1')
+            var ts2 = window.document.querySelector('input#s2')
             var res = window.document.getElementById('res')
-            var n1 = Number(tn1.value)
-            var n2 = Number(tn2.value)
-            var s = n1 + n2
-            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+            var sn1 = Number(ts1.value)
+            var sn2 = Number(ts2.value)
+            var s = sn1 + sn2
+            res.innerHTML = `A soma entre ${sn1} e ${sn2} é igual a <strong>${s}</strong>`
+        }
+        function subtrair() {
+            var tm1 = window.document.getElementById('m1')
+            var tm2 = window.document.querySelector('input#m2')
+            var res = window.document.getElementById('res')
+            var mn1 = Number(tm1.value)
+            var mn2 = Number(tm2.value)
+            var m = mn1 - mn2
+            res.innerHTML = `A subtração entre ${mn1} e ${mn2} é igual a <strong>${m}</strong>`
+        }
+        function multiplicar() {
+            var tv1 = window.document.getElementById('v1')
+            var tv2 = window.document.querySelector('input#v2')
+            var res = window.document.getElementById('res')
+            var vn1 = Number(tv1.value)
+            var vn2 = Number(tv2.value)
+            var v = vn1 * vn2
+            res.innerHTML = `A multiplicação entre ${vn1} e ${vn2} é igual a <strong>${v}</strong>`
+        }
+        function dividir() {
+            var td1 = window.document.getElementById('d1')
+            var td2 = window.document.querySelector('input#d2')
+            var res = window.document.getElementById('res')
+            var dn1 = Number(td1.value)
+            var dn2 = Number(td2.value)
+            var d = dn1 / dn2
+            res.innerHTML = `A divisão entre ${dn1} e ${dn2} é igual a <strong>${d}</strong>`
         }
     </script>
 </body>
